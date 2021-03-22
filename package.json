@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch sass -0 css"
+    "scss": "node-sass --watch sass -o css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "normalize.css": "^8.0.1"
   }
 }

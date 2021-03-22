@@ -1,0 +1,12 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:wght@300;400;700&family=Open+Sans:ital,wght@1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// Normalize CSS styles
+@import '../node_modules/normalize.css/normalize.css';
+
+// Imports
+// @import "compass";
+@import "./partials/buttons";
+@import "./partials/colors";
+@import "./partials/layout";
+@import "./partials/typography";
