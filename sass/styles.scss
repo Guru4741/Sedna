@@ -1,12 +1,363 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:wght@300;400;700&family=Open+Sans:ital,wght@1,300;1,400;1,600;1,700;1,800&display=swap');
 
+// Bootstrap CSS styles
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 // Normalize CSS styles
 @import '../node_modules/normalize.css/normalize.css';
 
 // Imports
-// @import "compass";
 @import "./partials/buttons";
 @import "./partials/colors";
 @import "./partials/layout";
 @import "./partials/typography";
+
+/* ==========================================================================
+Global Styles
+========================================================================== */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .no-padding {
+    padding: 0;
+  }
+  .no-margin {
+    margin: 0;
+  }
+  a {
+    color: $accent-color;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-property: color, border-color, background-color;
+    transition-property: color, border-color, background-color;
+  }
+  a:hover, a:focus {
+    color: $accent-color-hover;
+    text-decoration: none;
+  }
+  body {
+    font-family: $sans-serif;
+    font-weight: $light;
+    color: $txt-primary;
+    -webkit-text-size-adjust: 100%;
+    //fix for iOS
+  }
+  ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    list-style: none;
+  }
+  .section-padding {
+    padding: $section-padding;
+  }
+  .tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.4;
+    visibility: visible;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  .tooltip.in {
+    filter: alpha(opacity=90);
+    opacity: .9;
+  }
+  .tooltip.top {
+    padding: 5px 0;
+    margin-top: -3px;
+  }
+  .tooltip.right {
+    padding: 0 5px;
+    margin-left: 3px;
+  }
+  .tooltip.bottom {
+    padding: 5px 0;
+    margin-top: 3px;
+  }
+  .tooltip.left {
+    padding: 0 5px;
+    margin-left: -3px;
+  }
+  .tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #000;
+    border-radius: 4px;
+  }
+
+/* ==========================================================================
+Animations
+========================================================================== */
+.pulse2 {
+    animation-name: pulse2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes pulse2 {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .floating-arrow {
+    animation-name: floating-arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes floating-arrow {
+    from {
+      transform: translate(-50%, 0)
+    }
+    65% {
+      transform: translate(-50%, 15px)
+    }
+    to {
+      transform: translate(-50%, 0)
+    }
+  }
+  .floating-logo {
+    animation-name: floating-logo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes floating-logo {
+    from {
+      transform: translate(-50%, 0)
+    }
+    50% {
+      transform: translate(-50%, 10px)
+    }
+    to {
+      transform: translate(-50%, 0)
+    }
+  }  
+
+
+  /* ==========================================================================
+Navigation
+========================================================================== */
+.header-nav.open {
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 999999;
+    padding: 10px 35px 16px 0;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    & span,
+    & span:before,
+    & span:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 3px;
+        border-radius: 1px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    } 
+
+    & span:before {
+        top: -10px;
+    }
+
+    & span:after {
+        bottom: -10px;
+    }
+
+    &.active span {
+        background-color: transparent;
+    }
+
+    &.active span:before,
+    &.active span:after {
+        top: 0px;
+    }
+
+    &.active span:before {
+        transform: rotate(45deg);
+    }
+
+    &.active span:after {
+        top: 10px;
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+}
+
+
+.navicon {
+    position: absolute;
+    height: 26px;
+    right: 10px;
+    top: 48px;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;      
+}
+
+
+/* ==========================================================================
+Hero
+========================================================================== */
+
+.hero {
+    min-height: 750px;
+    background: url('../img/hero.jpg') center center;
+    background-size: cover;
+    position: relative;
+
+    .down-arrow a {
+        color: $txt-light;
+    }
+
+    h1 {
+        color: $txt-light;
+        margin-bottom: 40px;
+    }
+
+    p.intro {
+        color: $txt-light;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 80px;
+    }
+
+    &-content {
+        padding-top: 26%;
+    }
+
+}
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition: all 300ms ease-in-out;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #232731;
+}
+
+header {
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    transition: padding 300ms ease-in-out;
+
+    a {
+        color: $txt-light;
+        text-transform: uppercase;
+        font-size: $nav-font-size;
+
+        &.login {
+            margin-right: 20px;
+        }
+
+    }
+
+    .logo {
+        display: inline-block;
+    }
+
+    ul.primary-nav {
+        margin: 0 0 0 75px;
+        padding: 0;
+
+        li {
+            display: inline;
+
+            a {
+                color: $txt-light;
+                padding-right: 25px;
+
+                &:hover {
+                    color: $accent-color;
+                }
+
+            }
+
+            &:last-child a {
+                padding-right: 0px;
+            }
+
+        }
+
+    }
+
+    ul.member-actions {
+        li {
+            display: inline;
+
+            a {
+                color: $txt-light;
+
+                &:hover {
+                    color: $accent-color;
+                }
+
+            }
+             
+        }
+    }
+
+    .header-nav {
+        display: inline-block;
+    }
+
+    .member-actions {
+        position: absolute;
+        top: 41px;
+        right: 0;
+        transition: all 300ms ease-in-out;
+    }
+
+}
+
+.down-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #fff;
+    bottom: 30px;
+}
