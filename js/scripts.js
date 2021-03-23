@@ -1,4 +1,18 @@
 $(document).ready(function() {
+
+
+    /***************** Nav Transformicon ******************/
+
+    /* When user clicks the Icon */
+    $('.nav-toggle').click(function() {
+        $(this).toggleClass('active');
+        $('.header-nav').toggleClass('open');
+    })
+
+    /* When user clicks a link */
+
+    /***************** Header BG Scroll ******************/
+
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if(scroll >= 200){
