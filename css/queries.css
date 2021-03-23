@@ -123,11 +123,17 @@
         transition-delay: 0.3s;
     }    
 
+    .intro-content {
+        display: inline-block;
+        width: 75%;
+        margin-bottom: 30px;
+    }
+
 }
 
 @media screen and (max-width: 640px){
 
-}
+} 
 
 @media screen and (max-width: 480px){
     .hero .hero-content {

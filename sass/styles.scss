@@ -361,3 +361,30 @@ header {
     color: #fff;
     bottom: 30px;
 }
+
+/* ==========================================================================
+Intro
+========================================================================== */
+
+.intro {
+  span.icon {
+    font-size: 40px;
+    color: $accent-color;
+    font-weight: bold;
+  }
+
+  &-icon {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px 0 0 0;
+    margin-right: 20px;
+    width: 40px;
+  }
+
+  &-content {
+    display: inline-block;
+    width: 80%;
+  }
+
+
+}
