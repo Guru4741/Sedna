@@ -20,6 +20,11 @@ $(document).ready(function() {
 		offset: '75%'
 	});
 
+	/***************** Initiate Flexslider ******************/
+	$('.flexslider').flexslider({
+		animation: "slide"
+	});
+
     /***************** Nav Transformicon ******************/
 
     /* When user clicks the Icon */
