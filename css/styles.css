@@ -417,3 +417,9 @@ Features-stack
     position: absolute;
     bottom: -365px;
     right: 61%; }
+
+.features .responsive-feature-img, .features-extra .responsive-feature-img {
+  display: none; }
+
+.devices {
+  position: relative; }
