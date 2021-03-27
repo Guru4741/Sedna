@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch sass -o css"
+    "start": "webpack serve --config webpack.dev.js --open 'Google Chrome'",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,24 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
+    "css-loader": "^5.2.0",
     "flexslider": "^2.7.2",
+    "jquery": "^3.6.0",
     "jquery-waypoints": "^2.0.5",
     "node-sass": "^5.0.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }

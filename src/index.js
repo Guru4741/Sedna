@@ -1,3 +1,10 @@
+import '../sass/styles.scss';
+import img1 from './img/avatar.jpg';
+import img2 from './img/mani.jpg';
+import img3 from './img/130.jpg';
+import img4 from './img/devices.png';
+import img5 from './img/sedna-logo.png';
+
 $(document).ready(function() {
 
 	/***************** Waypoints ******************/
