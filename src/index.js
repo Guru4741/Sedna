@@ -1,31 +1,35 @@
-import '../sass/styles.scss';
+import './sass/styles.scss';
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import '@fortawesome/fontawesome-free/js/fontawesome'
+// import waypoint  from 'jquery-waypoints/waypoints';
 
 $(document).ready(function() {
 
 	/***************** Waypoints ******************/
 
-    $('.wp1').waypoint(function(){
-        $('.wp1').addClass('animated fadeInUp');
-    }, {
-        offset: '75%'
-    });
+    // $('.wp1').waypoint(function(){
+    //     $('.wp1').addClass('animated fadeInUp');
+    // }, {
+    //     offset: '75%'
+    // });
 
-	$('.wp2').waypoint(function() {
-		$('.wp2').addClass('animated fadeInUp');
-	}, {
-		offset: '75%'
-	});
+	// $('.wp2').waypoint(function() {
+	// 	$('.wp2').addClass('animated fadeInUp');
+	// }, {
+	// 	offset: '75%'
+	// });
 
-    $('.wp3').waypoint(function() {
-		$('.wp3').addClass('animated fadeInRight');
-	}, {
-		offset: '75%'
-	});
+    // $('.wp3').waypoint(function() {
+	// 	$('.wp3').addClass('animated fadeInRight');
+	// }, {
+	// 	offset: '75%'
+	// });
 
 	/***************** Initiate Flexslider ******************/
-	$('.flexslider').flexslider({
-		animation: "slide"
-	});
+	// $('.flexslider').flexslider({
+	// 	animation: "slide"
+	// });
 
     /***************** Nav Transformicon ******************/
 

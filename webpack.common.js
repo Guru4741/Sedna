@@ -22,7 +22,14 @@ module.exports = {
                 generator: {
                     filename: 'img/[name][ext]',
                 },
-            }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]',
+                },
+            }            
         ]
     }
 }
